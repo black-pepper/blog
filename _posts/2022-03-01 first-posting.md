@@ -1,9 +1,6 @@
 ---
-
-layouy: single
-
+layouy: post
 title: "첫번째 게시글입니다"
-
 ---
 
 # test
