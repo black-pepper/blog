@@ -10,15 +10,15 @@ main:
 docs:
   - title: "알고리즘"
     children:
-      - title: "백준"
-        url: /categories/#%EB%B0%B1%EC%A4%80
+      - title: "백준(BOJ)"
+        url: /categories/#BOJ
 
   - title: "웹개발"
     children:
 
   - title: "프로젝트"
     children:
-    
+
   #- title: "Quick-Start Guide"
   #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "About"
