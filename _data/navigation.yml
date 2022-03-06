@@ -12,7 +12,10 @@ docs:
     children:
       - title: "백준(BOJ)"
         url: /categories/#BOJ
-
+  - title: "데이터베이스"
+    children:
+      - title: "SQL"
+        url: /categories/#database
   - title: "웹개발"
     children:
 
