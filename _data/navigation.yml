@@ -20,7 +20,10 @@ docs:
         url: /categories/#database
   - title: "웹개발"
     children:
-
+      - title: "Front-end"
+        url: /categories/#front-end
+      - title: "Back-end"
+        url: /categories/#Back-end
   - title: "프로젝트"
     children:
 
