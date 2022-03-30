@@ -92,7 +92,8 @@ from collections import deque
 visited = [0] * 정점 개수
 def BFS(v):
     queue = deque()
-    deque.append(v)
+    queue.append(v)
+    visited[v] = 1
     while queue:
         for n in graph[v]:
             if not visited[n]:
@@ -106,8 +107,10 @@ from collections import deque
 visited = [0] * 정점 개수
 def BFS(v):
     queue = deque()
-    deque.append(v)
+    quque.append(v)
+    visited[v] = 1
     while queue:
+        v = queue.popleft()
         for n in range(len(graph)):
             if graph[i][n] and not visited[n]:
                 visited[n] = 1
@@ -124,10 +127,13 @@ nj = [0, 0, -1, 1]
 visited = [0] * 정점 개수
 def BFS(i, j):
     queue = deque((i, j))
-    for n in range(4):
-        if 0<=i+ni[n]<N and 0<=j+nj[n]<M and visited[i+ni[n]][j+nj[n]]:
-            queue.append((i+ni[n], j+nj[n]))
-            visited[i+ni[n]][j+nj[n]] = 1
+    visited[i][j] = 1
+    while queue:
+        i, j = queue.popleft()
+        for n in range(4):
+            if 0<=i+ni[n]<N and 0<=j+nj[n]<M and visited[i+ni[n]][j+nj[n]]:
+                queue.append((i+ni[n], j+nj[n]))
+                visited[i+ni[n]][j+nj[n]] = 1
 ```
 
 ---
@@ -189,7 +195,7 @@ def union(a, b):
     else: parent[b] = a
 ```
 
- ---
+---
 
 ## 최소 신장 트리(MST)
 
