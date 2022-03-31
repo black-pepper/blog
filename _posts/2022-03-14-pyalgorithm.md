@@ -74,7 +74,7 @@ N = 배열 세로길이
 M = 배열 가로길이
 ni = [-1, 1, 0, 0] #위, 아래, 왼쪽, 오른쪽
 nj = [0, 0, -1, 1]
-visited = [0] * 정점 개수
+visited = [[0]*M for _ in range(N)]
 def DFS(i, j):
     visited[i][j] = 1
     for n in range(4):
@@ -124,7 +124,7 @@ N = 배열 세로길이
 M = 배열 가로길이
 ni = [-1, 1, 0, 0] #위, 아래, 왼쪽, 오른쪽
 nj = [0, 0, -1, 1]
-visited = [0] * 정점 개수
+visited = [[0]*M for _ in range(N)]
 def BFS(i, j):
     queue = deque((i, j))
     visited[i][j] = 1
