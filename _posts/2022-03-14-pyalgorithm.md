@@ -148,20 +148,19 @@ import heapq
 INF = sys.maxsize
 
 def Dijkstra(start):    
-    distance = [INF] * (V+1)
+    distance = [INF]*(V+1)
 	distance[start] = 0
-    heap = []
-	heapq.heappush(heap, (start, 0))
+    heap = [(0, start)]
 
     while heap:
-        v, w = heapq.heappop(queue)
+        w, v = heapq.heappop(heap)
 
         if distance[v] < w: continue
 
         for nv , nw in graph[v]: #nv: 다음 정점, nw: 거리
             if w+nw < distance[nv]:
                 distance[nv] = w+nw
-                heapq.heappush(queue, (W+nw, nv))
+                heapq.heappush(heap, (w+nw, nv))
     return distance
 ```
 
