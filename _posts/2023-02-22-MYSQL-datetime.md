@@ -73,7 +73,7 @@ SELECT DATE_FORMAT(column_name_, "%Y-%m-%d") FROM table_name_
 | SUBTIME(*expr1, expr2*)                                      | 두 시간 차이 계산 (문자열)  |
 | TIMEDIFF(*expr1, expr2*)                                     | 두 시간 차이 계산           |
 
-```mysql
+```sql
 SELECT ADDDATE('2022-02-21', INTERVAL 1 DAY); -- 2022-02-22
 SELECT DATE_ADD('2022-02-21', INTERVAL 1 MONTH); -- 2022-03-21
 SELECT DATE_SUB('2022-02-21', INTERVAL 1 YEAR); -- 2021-02-21
@@ -93,7 +93,7 @@ SELECT TIMEDIFF('12:00:00', '08:30:00'); -- 03:30:00
 | SEC_TO_TIME(*seconds*)           | 초를 'hh:mm:ss' 형식으로 변환              |
 | STR_TO_DATE(*str, format*)       | 문자열을 날짜로 변환                       |
 
-```mysql
+```sql
 SELECT CONVERT_TZ('2004-01-01 12:00:00','GMT','MET');
 -- '2004-01-01 13:00:00'
 SELECT CONVERT_TZ('2023-02-21 10:00:00', 'UTC', 'Asia/Seoul');
